@@ -3,14 +3,14 @@
 
 using namespace std;
 
-static void BFS(int v, const vector<vector<int>> &adjList, vector<bool> &used)
+static void DFS(int v, const vector<vector<int>> &adjList, vector<bool> &used)
 {
     if (used[v]) return;
     used[v] = true;
 
     for (auto i : adjList[v])
     {
-        BFS(i, adjList, used);
+        DFS(i, adjList, used);
     }
 }
 
