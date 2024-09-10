@@ -18,8 +18,8 @@ bool mutuallyAchieve(int u, int v, const vector<vector<int>> &adjList)
 {
     vector<bool> used1(adjList.size()), used2(adjList.size());
 
-    BFS(u, adjList, used1);
-    BFS(v, adjList, used2);
+    DFS(u, adjList, used1);
+    DFS(v, adjList, used2);
 
     return used1[v] && used2[u];
 }
